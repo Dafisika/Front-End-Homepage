@@ -1,1 +1,10 @@
+@import url(./fonts/font.css);
 @import "tailwindcss";
+@theme {
+  --font-poppins: poppins;
+  --font-DMSans: DMSans;
+}
+
+* {
+  font-family: DMSans;
+}

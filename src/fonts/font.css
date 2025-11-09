@@ -1,0 +1,49 @@
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Medium.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-SemiBold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: DMSans;
+  src: url(DMSans_18pt-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: DMSans;
+  src: url(DMSans_18pt-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: DMSans;
+  src: url(./DMSans_18pt-Regular.ttf);
+  font-weight: 400;
+}
