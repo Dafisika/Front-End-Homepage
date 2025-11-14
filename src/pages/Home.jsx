@@ -3,17 +3,17 @@ import Avatar from "/avatar/Avatar.png";
 import banner from "/banner/banner.jpg";
 import Button from "../components/button/Button";
 import Logo from "/logo/videobelajar.png";
-import IconFb from "icon/fb.png";
-import IconIg from "icon/ig.png";
-import IconLinkedin from "icon/linkedin.png";
-import IconTwitter from "icon/twitter.png";
+import IconFb from "/icon/fb.png";
+import IconIg from "/icon/ig.png";
+import IconLinkedin from "/icon/linkedin.png";
+import IconTwitter from "/icon/twitter.png";
 
 function Home() {
     return (
         <>
             <Navbar account={true} />
 
-            <main className="bg-[#fffdf3] w-dvw h-dvh flex flex-col justify-center py-16 px-30 gap-16 ">
+            <main className="bg-[#fffdf3] flex flex-col justify-center py-16 px-30 gap-16 ">
                 <div className="relative ">
                     <div className="bg-[url(/banner/banner.jpg)] w-full h-[400px] rounded-[10px] bg-center"></div>
                     <section className="bg-black/80 absolute top-0 left-0 w-full h-[400px] pt-20.5 px-35 pb-16 140px] gap-6 rounded-[10px] flex flex-col justify-center items-center ">
@@ -54,55 +54,33 @@ function Home() {
                         <div className="feature">Bisnis</div>
                     </section>
                 </article>
-                <footer>
-                    <div class="info">
-                        <section class="info-1">
+
+                <footer className="flex flex-col  bg-white  border-t border-red-600 py-15 px-30 gap-5 ">
+                    <div className="flex justify-between ">
+                        <section className="flex flex-col h-full gap-4">
                             <img
-                                src="/logo/videobelajar.png
-"
+                                className="w-60 h-auto"
+                                src="/logo/videobelajar.png"
                                 alt=""
                             />
-                            <p class="name">
+                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
                                 Gali Potensi Anda Melalui Pembelajaran Video di
                                 hariesok.id
                             </p>
-                            <p class="address">
+                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[3a3541ad]">
                                 Jl. Usman Effendi No. 50 Lowokwaru, Malang
                             </p>
-                            <p class="number">+62-877-7123-1234</p>
+                            <p className="number">+62-877-7123-1234</p>
                         </section>
 
-                        <section class="info-2">
-                            <div class="section-1">
-                                <div class="section-title">
-                                    <p>Kategori</p>
-                                    <svg
-                                        class="arrow"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g
-                                            id="SVGRepo_bgCarrier"
-                                            stroke-width="0"
-                                        ></g>
-                                        <g
-                                            id="SVGRepo_tracerCarrier"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        ></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path
-                                                d="M9 6L15 12L9 18"
-                                                stroke="#3A35418A"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            ></path>
-                                        </g>
-                                    </svg>
+                        <section className="flex  gap-12">
+                            <div className="flex flex-col gap-[15px]">
+                                <div className="flex justify-between items-center">
+                                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                        Kategori
+                                    </p>
                                 </div>
-                                <div class="section-desc">
+                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
                                     <a href="">Digital & Teknologi</a>
                                     <a href="">Pemasaran</a>
                                     <a href="">Manajemen Bisnis</a>
@@ -110,36 +88,13 @@ function Home() {
                                     <a href="">Desain</a>
                                 </div>
                             </div>
-                            <div class="section-1">
-                                <div class="section-title">
-                                    <p>Perusahaan</p>
-                                    <svg
-                                        class="arrow"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g
-                                            id="SVGRepo_bgCarrier"
-                                            stroke-width="0"
-                                        ></g>
-                                        <g
-                                            id="SVGRepo_tracerCarrier"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        ></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path
-                                                d="M9 6L15 12L9 18"
-                                                stroke="#3A35418A"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            ></path>
-                                        </g>
-                                    </svg>
+                            <div className="flex flex-col gap-[15px]">
+                                <div className="flex justify-between items-center">
+                                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                        Perusahaan
+                                    </p>
                                 </div>
-                                <div class="section-desc">
+                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
                                     <a href="">Tentang Kami</a>
                                     <a href="">FAQ</a>
                                     <a href="">Kebijakan Privasi</a>
@@ -147,61 +102,41 @@ function Home() {
                                     <a href="">Bantuan</a>
                                 </div>
                             </div>
-                            <div class="section-1">
-                                <div class="section-title">
-                                    <p>Komunitas</p>
-                                    <svg
-                                        class="arrow"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g
-                                            id="SVGRepo_bgCarrier"
-                                            stroke-width="0"
-                                        ></g>
-                                        <g
-                                            id="SVGRepo_tracerCarrier"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        ></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path
-                                                d="M9 6L15 12L9 18"
-                                                stroke="#3A35418A"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            ></path>
-                                        </g>
-                                    </svg>
+                            <div className="flex flex-col gap-[15px]">
+                                <div className="flex flex-col  justify-between items-center">
+                                    <p className="flex font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                        Komunitas
+                                    </p>
                                 </div>
-                                <div class="section-desc">
+                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
                                     <a href="">Tips Sukses</a>
                                     <a href="">Blog</a>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <section class="line">
+
+                    <section className="pt-8 mt-2.5 border-none border-[#3a35411f]">
                         <hr />
                     </section>
 
-                    <section class="info-3">
-                        <div class="copyright">
+                    <section className="flex justify-between">
+                        <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">
+                            {" "}
                             @2023 Gerobak Sayur All Rights Reserved.
-                        </div>
-                        <div class="sosmed">
-                            <div class="sosmed-1">
+                        </p>
+
+                        <div className="flex gap-[15px]">
+                            <div className="w-5 h-5 ">
                                 <img src="/icon/linkedin.png" alt="" />
                             </div>
-                            <div class="sosmed-1">
+                            <div className="w-5 h-5">
                                 <img src="/icon/fb.png" alt="" />
                             </div>
-                            <div class="sosmed-1">
+                            <div className="w-5 h-5">
                                 <img src="/icon/ig.png" alt="" />
                             </div>
-                            <div class="sosmed-1">
+                            <div className="w-5 h-5">
                                 <img src="/icon/twitter.png" alt="" />
                             </div>
                         </div>
