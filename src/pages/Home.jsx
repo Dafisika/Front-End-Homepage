@@ -1,4 +1,7 @@
 import Navbar from "../components/navbar/Navbar";
+import Banner from "../components/Banner";
+import Card from "../components/card/Card";
+import Footer from "../components/Footer";
 import Avatar from "/avatar/Avatar.png";
 import banner from "/banner/banner.jpg";
 import Button from "../components/button/Button";
@@ -18,8 +21,7 @@ function Home() {
 
             <main className="bg-[#fffdf3] flex flex-col justify-center py-16 px-30 gap-16 ">
                 <div className="relative ">
-                    <div className="bg-[url(/banner/banner.jpg)] w-full h-[400px] rounded-[10px] bg-center"></div>
-                    <section className="bg-black/80 absolute top-0 left-0 w-full h-[400px] pt-20.5 px-35 pb-16 140px] gap-6 rounded-[10px] flex flex-col justify-center items-center ">
+                    <Banner>
                         <h1 className="font-poppins! font-bold text-5xl line leading-[110.00000000000001%] text-center text-white">
                             Revolusi Pembelajaran: Temukan Ilmu Baru melalui
                             Platform Video Interaktif!
@@ -35,7 +37,7 @@ function Home() {
                             text="Temukan Video Course Untuk Dipelajari!"
                             customStyle="bg-[#3ecf4c] text-white"
                         />
-                    </section>
+                    </Banner>
                 </div>
                 <article className="flex flex-col gap-8">
                     <section className="flex flex-col w-full h-full gap-2.5 ">
@@ -56,284 +58,65 @@ function Home() {
                         <div className="feature">Pengembangan Diri</div>
                         <div className="feature">Bisnis</div>
                     </section>
-                    <section className="flex gap-6">
-                        {Article.map((Articles, index) => (
-                            <div className="flex flex-col w-[384px] bg-white border border-[#3A35411F] rounded-[10px] p-5 gap-4">
-                                <img
-                                    className="w-[344px] h-[193px]"
-                                    // src="<ul>
-                                    // {posts.map((post) =>
-                                    //     <li> key={post.image} > {}
-                                    //     </li>)
-                                    // }
-                                    // </ul>
-                                    // ${data[i].image}"
-                                />
-                                <h3 className="font-DMSans font-semibold text-lg text-[#222325] leading-[120%]">
-                                    {" "}
-                                    Big 4 Auditor Financial Analyst{" "}
-                                </h3>
-                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                                    {" "}
-                                    Mulai transformasi dengan instruktur
-                                    profesional, harga yang terjangkau, dan
-                                    kurikulum terbaik
-                                </p>
-                                <div className="flex  gap-2.5">
-                                    <img
-                                        className="w-10 h-10 rounded-[10px]"
-                                        src="/avatar/Avatar-1.png"
-                                    />
-                                    <div className="">
-                                        <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
-                                            Jenna Ortega
-                                        </p>
-                                        <p className="font-normal text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                                            Senior Accountant di{" "}
-                                            <span className="font-bold text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                                                Gojek
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between items-center ">
-                                    <div className="flex gap-2">
-                                        <div className="flex ">
-                                            <div className="flex">
-                                                <svg
-                                                    viewBox="0 0 64 64"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    aria-hidden="true"
-                                                    role="img"
-                                                    className="w-[18px] h-[18px]"
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    fill="#000000"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                                            fill="#ffce31"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                                <svg
-                                                    viewBox="0 0 64 64"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    aria-hidden="true"
-                                                    role="img"
-                                                    className="w-[18px] h-[18px]"
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    fill="#000000"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                                            fill="#ffce31"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                                <svg
-                                                    viewBox="0 0 64 64"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    aria-hidden="true"
-                                                    role="img"
-                                                    className="w-[18px] h-[18px]"
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    fill="#000000"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                                            fill="#ffce31"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                                <svg
-                                                    viewBox="0 0 64 64"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    aria-hidden="true"
-                                                    role="img"
-                                                    className="w-[18px] h-[18px]"
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    fill="#c4c4c4"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                                            fill="#c4c4c4"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                                <svg
-                                                    viewBox="0 0 64 64"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    aria-hidden="true"
-                                                    role="img"
-                                                    className="w-[18px] h-[18px]"
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    fill="#c4c4c4"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                                            fill="#c4c4c4"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333ad] underline decoration-solid">
-                                            <p>3.5 (86)</p>
-                                        </div>
-                                    </div>
-                                    <div className="font-semibold text-2xl leading-[120%] text-[#3ecf4c]">
-                                        <p>Rp 300000</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <section className="grid grid-cols-3 gap-6">
+                        {Article.map((item, index) => (
+                            <Card
+                                image={item.image}
+                                title={item.title}
+                                description={item.description}
+                                avatar={item.user.avatar}
+                                name={item.user.name}
+                                position={item.user.position}
+                                company={item.user.company}
+                                rating={item.testimonial.rating}
+                                review={item.testimonial.review}
+                                price={item.price}
+                            />
                         ))}
                     </section>
                 </article>
 
-                <footer className="flex flex-col  bg-white  border-t border-[#3a35411f] py-15 px-3 gap-5 ">
-                    <div className="flex justify-between ">
-                        <section className="flex flex-col h-full gap-4">
-                            <img
-                                className="w-60 h-auto"
-                                src="/logo/videobelajar.png"
-                                alt=""
-                            />
-                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
-                                Gali Potensi Anda Melalui Pembelajaran Video di
-                                hariesok.id
-                            </p>
-                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[3a3541ad]">
-                                Jl. Usman Effendi No. 50 Lowokwaru, Malang
-                            </p>
-                            <p className="number">+62-877-7123-1234</p>
-                        </section>
-
-                        <section className="flex  gap-12">
-                            <div className="flex flex-col gap-[15px]">
-                                <div className="flex justify-between items-center">
-                                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
-                                        Kategori
+                <div className="low-banner-img">
+                    <div className="relative ">
+                        <Banner>
+                            <div className="flex flex-col items-center justify-center w-[525px] h-[118px] gap-10">
+                                <div className="flex flex-col items-center justify-center w-[525px] h-[118px] gap-1 text-white">
+                                    <p className="font-medium text-lg leading-[140%] tracking-[0.2%] text-[#C1C2C4]">
+                                        NEWSLETTER
                                     </p>
+                                    <div className="flex flex-col gap-2.5">
+                                        <p className="font-poppins! font-semibold text-[32px] leading-[110.00000000000001%] text-center text-white">
+                                            Mau Belajar Lebih Banyak?
+                                        </p>
+                                        <p className="font-medium text-base tracking-[0.2%] text-[#F4F5FA] text-center">
+                                            Daftarkan dirimu untuk mendapatkan
+                                            informasi terbaru dan penawaran
+                                            spesial dari program-program terbaik
+                                            hariesok.id
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
-                                    <a href="">Digital & Teknologi</a>
-                                    <a href="">Pemasaran</a>
-                                    <a href="">Manajemen Bisnis</a>
-                                    <a href="">Pengembangan Diri</a>
-                                    <a href="">Desain</a>
+                                <div className="flex w-full h-[58px] relative bg-white border-none rounded-[10px] py-2 pe-2 ps-8 gap-5 items-center">
+                                    <input
+                                        className="w-[525px] py-2 pe-2  gap-5"
+                                        id="email"
+                                        type="email"
+                                        placeholder="Masukkan Emailmu"
+                                    />
+                                    <button
+                                        className=" absolute right-2 bg-[#FFBD3A] border-none rounded-[10px]  py-2.5 px-[26px] text-white"
+                                        id="subscribe"
+                                        type="button"
+                                    >
+                                        Subscribe
+                                    </button>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-[15px]">
-                                <div className="flex justify-between items-center">
-                                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
-                                        Perusahaan
-                                    </p>
-                                </div>
-                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
-                                    <a href="">Tentang Kami</a>
-                                    <a href="">FAQ</a>
-                                    <a href="">Kebijakan Privasi</a>
-                                    <a href="">Ketentuan Layanan</a>
-                                    <a href="">Bantuan</a>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-[15px]">
-                                <div className="flex flex-col  justify-between items-center">
-                                    <p className="flex font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
-                                        Komunitas
-                                    </p>
-                                </div>
-                                <div className="flex flex-col font-medium text-base  text-[#333333ad] leading-[140%] tracking-[0.2%] gap-[13px]">
-                                    <a href="">Tips Sukses</a>
-                                    <a href="">Blog</a>
-                                </div>
-                            </div>
-                        </section>
+                        </Banner>
                     </div>
-
-                    <section className="pt-8 mt-2.5 border-none text-[#3A35411F]">
-                        <hr />
-                    </section>
-
-                    <section className="flex justify-between">
-                        <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">
-                            {" "}
-                            @2023 Gerobak Sayur All Rights Reserved.
-                        </p>
-
-                        <div className="flex gap-[15px]">
-                            <div className="w-5 h-5 ">
-                                <img src="/icon/linkedin.png" alt="" />
-                            </div>
-                            <div className="w-5 h-5">
-                                <img src="/icon/fb.png" alt="" />
-                            </div>
-                            <div className="w-5 h-5">
-                                <img src="/icon/ig.png" alt="" />
-                            </div>
-                            <div className="w-5 h-5">
-                                <img src="/icon/twitter.png" alt="" />
-                            </div>
-                        </div>
-                    </section>
-                </footer>
+                </div>
             </main>
+            <Footer />
         </>
     );
 }

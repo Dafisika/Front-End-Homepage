@@ -1,7 +1,7 @@
 [
     {
         "image": "/cover/card-1.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-1.png",
@@ -9,7 +9,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -18,7 +18,7 @@
     },
     {
         "image": "/cover/card-2.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-2.png",
@@ -26,7 +26,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -35,7 +35,7 @@
     },
     {
         "image": "/cover/card-3.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-3.png",
@@ -43,7 +43,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -52,7 +52,7 @@
     },
     {
         "image": "/cover/card-4.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-4.png",
@@ -60,7 +60,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -69,7 +69,7 @@
     },
     {
         "image": "/cover/card-5.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-5.png",
@@ -77,7 +77,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -86,7 +86,7 @@
     },
     {
         "image": "/cover/card-6.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-6.png",
@@ -94,7 +94,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -103,7 +103,7 @@
     },
     {
         "image": "/cover/card-7.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-7.png",
@@ -111,7 +111,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -120,7 +120,7 @@
     },
     {
         "image": "/cover/card-8.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-8.png",
@@ -128,7 +128,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
@@ -137,7 +137,7 @@
     },
     {
         "image": "/cover/card-9.png",
-        "tittle": "Big 4 Auditor Financial Analyst",
+        "title": "Big 4 Auditor Financial Analyst",
         "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         "user": {
             "avatar": "/avatar/Avatar-9.png",
@@ -145,7 +145,7 @@
             "position": "Senior Accountant",
             "company": "Gojek"
         },
-        "rating": {
+        "testimonial": {
             "rating": 3.5,
             "review": 86
         },
