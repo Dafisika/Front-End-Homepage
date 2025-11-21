@@ -24,8 +24,8 @@ function All() {
                         Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
                     </p>
                 </header>
-                <div className="w-full flex gap-[42px]">
-                    <aside className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-5 gap-4">
+                <div className="flex gap-[42px]">
+                    <aside className="bg-white h-full flex flex-col border border-[#3A35411F] rounded-[10px] p-5 gap-4">
                         <div className="flex justify-between">
                             <p className="font-poppins font-semibold text-[18px] leading-[120%] text-[#333333AD]">
                                 Filter
@@ -383,7 +383,7 @@ function All() {
                     <article className="w-full flex flex-col gap-8">
                         <div className="w-full flex justify-end gap-4 items-center">
                             <div className="flex gap-3 ">
-                                <div className="flex h-12 border border-[#3A35411F] rounded-[10px] py-3 px-3 gap-2">
+                                <div className="relative flex h-12 border border-[#3A35411F] rounded-[10px] py-3 px-3 gap-2">
                                     <button className="flex items-center text-[#333333AD] rounded-[10px]  gap-2">
                                         Urutkan
                                         <svg
@@ -435,9 +435,29 @@ function All() {
                                             </g>
                                         </svg>
                                     </button>
+                                    <div className="absolute top-15 right-0 bg-white w-[156px] h-[248px] flex flex-col border border-[#3E434A26] rounded-[10px] py-3.5 px-4 gap-5">
+                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#222325]">
+                                            Harga Rendah
+                                        </p>
+                                        <p className="w-[156px] h-10  px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                            Harga Tinggi
+                                        </p>
+                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                            A to Z
+                                        </p>
+                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                            Z to A
+                                        </p>
+                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                            Rating Tertinggi
+                                        </p>
+                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                            Rating Terendah
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex  gap-[3px]">
+                            <div className="flex gap-[3px]">
                                 <div className="flex h-12 border border-[#3A35411F] rounded-[10px] py-3 px-3 gap-2">
                                     <input
                                         className="flex items-center placeholder:text-[#333333AD] gap-2"
@@ -473,10 +493,75 @@ function All() {
                                 </div>
                             </div>
                         </div>
-                        <section></section>
+
+                        <section className="grid grid-cols-2 grid-rows-1 gap-6">
+                            {Article.slice(0, 6).map((item, index) => (
+                                <Card
+                                    image={item.image}
+                                    title={item.title}
+                                    description={item.description}
+                                    avatar={item.user.avatar}
+                                    name={item.user.name}
+                                    position={item.user.position}
+                                    company={item.user.company}
+                                    rating={item.testimonial.rating}
+                                    review={item.testimonial.review}
+                                    price={item.price}
+                                />
+                            ))}
+                        </section>
+                        <div className="flex border-none rounded-sm p-2 gap-1.5 justify-end">
+                            <div className="flex items-center bg-[#F4F5FA] w-10 h-10 p-2">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
+                                        fill="#222325"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="flex justify-center w-10 h-10 bg-[#FFBD3A] text-white border-none rounded-sm p-2">
+                                1
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#333333AD] border-none rounded-sm p-2">
+                                2
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#333333AD] border-none rounded-sm p-2">
+                                3
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#333333AD] border-none rounded-sm p-2">
+                                4
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#333333AD] border-none rounded-sm p-2">
+                                5
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#333333AD] border-none rounded-sm p-2">
+                                6
+                            </div>
+                            <div className="bg-[#F4F5FA] w-10 h-10 border-none rounded-sm p-2 items-center rotate-180">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
+                                        fill="#222325"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </main>
+            <Footer />
         </>
     );
 }

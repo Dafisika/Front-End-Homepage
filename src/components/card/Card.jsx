@@ -15,8 +15,8 @@ function Card(props) {
     const convertIdr = price > 1000 ? price / 1000 + "K" : price;
 
     return (
-        <div className="flex flex-col w-[384px] bg-white border border-[#3A35411F] rounded-[10px] p-5 gap-4">
-            <img className="w-[344px] h-[193px]" src={image} />
+        <div className="flex flex-col w-full bg-white border border-[#3A35411F] rounded-[10px] p-5 gap-4">
+            <img className="w-full h-[193px]" src={image} />
             <h3 className="font-DMSans font-semibold text-lg text-[#222325] leading-[120%]">
                 {title}
             </h3>
