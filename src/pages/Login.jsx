@@ -74,7 +74,6 @@ function Login() {
                         <div class="log-google">
                             <button className="flex justify-center items-center w-[518px] h-[42px] border border-[#f1f1f1] text-[#333333ad] text-center outline-none rounded-2.5 py-2.5 px-25 pointer font-bold text-base gap-2">
                                 <img class="logo-google" src={Google} />
-                                Masuk dengan Google
                             </button>
                         </div>
                     </form>

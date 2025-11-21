@@ -15,7 +15,7 @@ function All() {
     return (
         <>
             <Navbar account={true} />
-            <main className="flex flex-col justify-center py-16 px-30 gap-9 ">
+            <main className="flex flex-col justify-center py-16 px-30 gap-9">
                 <header className="flex flex-col w-full h-full gap-2.5 ">
                     <h1 className="font-poppins font-semibold text-[32px] leading-[110%] text-[#222325]">
                         Koleksi Video Pembelajaran Unggulan
