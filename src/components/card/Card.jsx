@@ -30,7 +30,7 @@ function Card(props) {
                         {name}
                     </p>
                     <p className="font-normal text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                        {position}
+                        {position}{" "}
                         <span className="font-bold text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
                             {company}
                         </span>
