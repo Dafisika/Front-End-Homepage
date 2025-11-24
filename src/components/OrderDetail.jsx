@@ -1,7 +1,7 @@
 function OrderDetail(props) {
     const { children } = props;
     return (
-        <section className="bg-white flex flex-col  gap-6">
+        <section className="bg-white flex flex-col gap-6">
             <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
                 Ringkasan Pesanan
             </p>

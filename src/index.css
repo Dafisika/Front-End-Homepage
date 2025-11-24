@@ -3,6 +3,9 @@
 @theme {
     --font-poppins: poppins;
     --font-DMSans: DMSans;
+
+    --color-text-dark-primary: #222325;
+    --color-secondary: #333333;
 }
 
 * {

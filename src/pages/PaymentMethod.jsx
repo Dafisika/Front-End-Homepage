@@ -14,16 +14,18 @@ import MasterCard from "/bank/mastercard.png";
 import Visa from "/bank/visa.png";
 import Jcb from "/bank/jcb.png";
 import Product from "../components/Product";
+import Card1 from "/cover/card-1.png";
 
-function PaymentWay() {
+function PaymentMethod() {
     return (
         <>
-            <Navbar />
+            <Navbar payment={true} />
+
             <main className="bg-[#FFFDF3] flex flex-col justify-center py-16 px-30 gap-9">
                 <article className="grid grid-cols-3 gap-9">
                     <section className="bg-white flex flex-col col-span-2 gap-6">
                         <div className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-poppins! font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Metode Pembayaran
                             </p>
                             <div className="flex justify-between border border-[#3A35411F] rounded-[10px]  py-4 px-5">
@@ -240,11 +242,11 @@ function PaymentWay() {
                         </section>
                     </section>
                     <div className="">
-                        <Product />
+                        <Product image={Card1} />
                     </div>
                 </article>
             </main>
         </>
     );
 }
-export default PaymentWay;
+export default PaymentMethod;

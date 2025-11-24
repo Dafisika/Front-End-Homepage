@@ -1,14 +1,28 @@
 import Button from "../components/button/Button";
+import Accordion from "../components/accordion/Accordion";
+import AccordionItem from "../components/accordion/AccordionItem";
 import Navbar from "../components/navbar/Navbar";
 import OrderDetail from "../components/OrderDetail";
 import Product from "../components/Product";
 import BcaFull from "/bank/bca-full.png";
 
 function Payment() {
+    const accordionItem = [
+        { name: "Buka Aplikasi BCA Mobile" },
+        { name: 'Pilih "m-BCA", kemudian pilih "m-Transfer"' },
+        { name: 'Pilih "BCA Virtual Account"' },
+        { name: 'Masukkan nomor Virtual Account, lalu pilih "OK"' },
+        {
+            name: 'Klik tombol "Send" yang berada di sudut kanan atas aplikasi untuk melakukan transfer',
+        },
+        { name: 'Klik "OK" untuk melanjutkan pembayaran' },
+        { name: "Masukkan PIN Anda untuk meng-otorisasi transaksi" },
+        { name: "Transaksi Anda telah selesai" },
+    ];
     return (
         <>
+            <Navbar payment={true} />
             <main className="bg-[#FFFDF3]">
-                <Navbar />
                 <section className="bg-[#FEE8D2CC] flex justify-center items-center py-3 gap-4">
                     <p className="font-medium text-lg leading-[140%] tracking-[0.2px] text-[#333333AD]">
                         Selesaikan pemesanan dalam
@@ -64,6 +78,9 @@ function Payment() {
                                 </OrderDetail>
                             </div>
                         </div>
+                    </section>
+                    <section>
+                        <Product />
                     </section>
                     <section className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
                         <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
@@ -141,9 +158,13 @@ function Payment() {
                             </div>
                         </div>
                     </section>
-                    <div className="">
-                        <Product />
-                    </div>
+                    <Accordion>
+                        <AccordionItem title="ATM BCA">
+                            {accordionItem.map((item, index) => (
+                                <li key={index}>{item.name}</li>
+                            ))}
+                        </AccordionItem>
+                    </Accordion>
                 </article>
             </main>
         </>
