@@ -4,7 +4,7 @@ import AccordionItem from "../../components/accordion/AccordionItem";
 import Navbar from "../../components/navbar/Navbar";
 import Product from "../../components/Product";
 import BcaFull from "/bank/bca-full.png";
-import OrderSummary from "../../components/OrderSummary";
+import OrderSummary from "../../components/order/OrderSummary";
 import PaymentProcedure from "../../components/PaymentProcedure";
 
 function Payment() {

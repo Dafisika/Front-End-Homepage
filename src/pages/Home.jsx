@@ -41,7 +41,7 @@ function Home() {
                 </div>
                 <article className="flex flex-col gap-8">
                     <section className="flex flex-col w-full h-full gap-2.5 ">
-                        <h2 className="font-poppins font-semibold text-[32px] leading-[110%] text-[#222325]">
+                        <h2 className="font-poppins font-semibold text-[32px] leading-[110%] text-text-dark-primary">
                             Koleksi Video Pembelajaran Unggulan
                         </h2>
                         <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">

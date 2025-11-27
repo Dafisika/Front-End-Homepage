@@ -41,7 +41,7 @@ function Product(props) {
             </div>
 
             <div className="flex flex-col gap-3">
-                <p className="font-poppins font-semibold text-sm leading-[140%] tracking-[0.2%] text-[#222325]">
+                <p className="font-poppins font-semibold text-sm leading-[140%] tracking-[0.2%] text-text-dark-primary">
                     Kelas Ini Sudah Termasuk
                 </p>
                 <div className="grid grid-cols-2 gap-4">

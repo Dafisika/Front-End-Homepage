@@ -1,6 +1,11 @@
 import Navbar from "../../components/navbar/Navbar";
+import OrderDetail from "../../components/order/OrderDetail";
+import Card1 from "/cover/card-1.png";
+import Detail from "../../data/Detail.json";
+import Pagination from "../../components/Pagination";
+import Footer from "../../components/Footer";
 
-function Order() {
+function MyOrderDetailProduct() {
     return (
         <>
             <Navbar account />
@@ -74,15 +79,21 @@ function Order() {
                         </div>
                     </aside>
                     <section className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-5 gap-8">
-                        <div className="flex items-center gap-8 ">
-                            <div className="flex w-full gap-1.5 py-3 pe-9 font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                                <div className="flex flex-col py-3 pe-9 gap-1.5">
+                        <div className="flex gap-8 ">
+                            <div className="flex overflow-x-auto w-full gap-1.5 py-3 pe-9 font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
+                                <div className="flex flex-col text-nowrap py-3 pe-9 gap-1.5">
                                     Semua Pesanan
                                     <hr className="w-[52px] h-1.5 border-none outline-none rounded-[10px] bg-[#f64920]" />
                                 </div>
-                                <div className="py-3 pe-9">Menunggu</div>
-                                <div className="py-3 pe-9">Berhasil</div>
-                                <div className="py-3 pe-9">Gagal</div>
+                                <div className="text-nowrap py-3 pe-9">
+                                    Menunggu
+                                </div>
+                                <div className="text-nowrap py-3 pe-9">
+                                    Berhasil
+                                </div>
+                                <div className="text-nowrap py-3 pe-9">
+                                    Gagal
+                                </div>
                             </div>
                             <div className="flex items-center gap-4 ">
                                 <div className="flex gap-[3px]">
@@ -175,10 +186,25 @@ function Order() {
                                 </div>
                             </div>
                         </div>
+                        <section className="flex flex-col col-span-5 gap-6">
+                            {Detail.map((item, index) => (
+                                <OrderDetail
+                                    noInvoice={item.noInvoice}
+                                    waktuPembayaran={item.waktuPembayaran}
+                                    status={item.status}
+                                    image={item.orderDetail.image}
+                                    detail={item.orderDetail.detail}
+                                    harga={item.orderDetail.harga}
+                                    totalPembayaran={item.totalPembayaran}
+                                />
+                            ))}
+                        </section>
+                        <Pagination />
                     </section>
                 </article>
             </main>
+            <Footer />
         </>
     );
 }
-export default Order;
+export default MyOrderDetailProduct;

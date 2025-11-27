@@ -9,11 +9,11 @@ import DetailProduct from "./pages/product/DetailProduct";
 import Payment from "./pages/payment/Payment";
 import PaymentMethod from "./pages/payment/PaymentMethod";
 import ChangePaymentMethod from "./pages/payment/ChangePaymentMethod";
-import PaymentDone from "./pages/payment/PaymentDone";
-import Order from "./pages/order/Order";
+import DoneOrPending from "./pages/payment/DoneOrPending";
+import OrderDetailProduct from "./pages/order/MyOrderDetailProduct";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Order />
+        <DoneOrPending />
     </StrictMode>
 );

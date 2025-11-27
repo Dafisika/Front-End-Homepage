@@ -17,7 +17,7 @@ function Card(props) {
     return (
         <div className="flex flex-col w-full bg-white border border-[#3A35411F] rounded-[10px] p-5 gap-4">
             <img className="w-full h-[193px]" src={image} />
-            <h3 className="font-DMSans font-semibold text-lg text-[#222325] leading-[120%]">
+            <h3 className="font-DMSans font-semibold text-lg text-text-dark-primary leading-[120%]">
                 {title}
             </h3>
             <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
@@ -26,7 +26,7 @@ function Card(props) {
             <div className="flex  gap-2.5">
                 <img className="w-10 h-10 rounded-[10px]" src={avatar} />
                 <div className="">
-                    <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                    <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                         {name}
                     </p>
                     <p className="font-normal text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
