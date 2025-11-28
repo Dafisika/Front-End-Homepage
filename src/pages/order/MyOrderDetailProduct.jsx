@@ -189,6 +189,7 @@ function MyOrderDetailProduct() {
                         <section className="flex flex-col col-span-5 gap-6">
                             {Detail.map((item, index) => (
                                 <OrderDetail
+                                    key={index}
                                     noInvoice={item.noInvoice}
                                     waktuPembayaran={item.waktuPembayaran}
                                     status={item.status}

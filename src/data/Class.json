@@ -1,0 +1,30 @@
+[
+    {
+        "modul": "12 / 12 Modul Terselesaikan",
+        "status": "Selesai",
+        "image": "/cover/card-6.png",
+        "title": "Big 4 Auditor Financial Analyst",
+        "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+        "user": {
+            "avatar": "/avatar/Avatar-1.png",
+            "name": "Jenna Ortega",
+            "position": "Senior Accountant di",
+            "company": "Gojek"
+        },
+        "progress": 100
+    },
+    {
+        "modul": "2 / 12 Modul Terselesaikan",
+        "status": "Sedang Berjalan",
+        "image": "/cover/card-6.png",
+        "title": "Big 4 Auditor Financial Analyst",
+        "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+        "user": {
+            "avatar": "/avatar/Avatar-1.png",
+            "name": "Jenna Ortega",
+            "position": "Senior Accountant di",
+            "company": "Gojek"
+        },
+        "progress": 28
+    }
+]

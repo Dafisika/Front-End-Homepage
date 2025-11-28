@@ -2,7 +2,7 @@ import Button from "../../components/button/Button";
 import Navbar from "../../components/navbar/Navbar";
 import PaymentProcedure from "../../components/PaymentProcedure";
 import Product from "../../components/Product";
-import ShoppingSummary from "../../components/ShoppingSummary";
+import ShoppingSummary from "../../components/order/ShoppingSummary";
 import Card1 from "/cover/card-1.png";
 
 function ChangePaymentMethod() {
