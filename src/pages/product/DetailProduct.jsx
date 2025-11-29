@@ -34,7 +34,7 @@ function DetailProduct() {
                         Desain
                     </a>
                     <p className="text-[#333333AD]">/</p>
-                    <a className="font-normal text-base text-[#222325] leading-[140%] tracking-[0.2%] ">
+                    <a className="font-normal text-base text-text-dark-primary leading-[140%] tracking-[0.2%] ">
                         Gapai Karier Impianmu sebagai Seorang UI/UX Designer &
                         Product Manager.
                     </a>
@@ -225,7 +225,7 @@ function DetailProduct() {
                             </p>
                         </div>
                         <div className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Belajar bersama Tutor Profesional
                             </p>
                             <div className="flex gap-4">
@@ -237,7 +237,7 @@ function DetailProduct() {
                                                 src="/avatar/Avatar-1.png"
                                             />
                                             <div className="flex flex-col">
-                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                     Gregorius Edrik Lawanto
                                                 </p>
                                                 <div className="">
@@ -252,7 +252,7 @@ function DetailProduct() {
                                             </div>
                                         </div>
                                         <div className="">
-                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                 Berkarier di bidang HR selama
                                                 lebih dari 3 tahun. Saat ini
                                                 bekerja sebagai Senior Talent
@@ -271,7 +271,7 @@ function DetailProduct() {
                                                 src="/avatar/Avatar-1.png"
                                             />
                                             <div className="flex flex-col">
-                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                     Gregorius Edrik Lawanto
                                                 </p>
                                                 <div className="">
@@ -286,7 +286,7 @@ function DetailProduct() {
                                             </div>
                                         </div>
                                         <div className="">
-                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                 Berkarier di bidang HR selama
                                                 lebih dari 3 tahun. Saat ini
                                                 bekerja sebagai Senior Talent
@@ -300,7 +300,7 @@ function DetailProduct() {
                             </div>
                         </div>
                         <div className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-poppins font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Kamu Akan Mempelajari
                             </p>
                             <div className="flex flex-col gap-6">
@@ -329,7 +329,7 @@ function DetailProduct() {
                                         </svg>
                                     </div>
                                     <div className="bg-white flex justify-between border border-[#3A35411F] rounded-[10px] p-5 ">
-                                        <p className="font-medium text-base text-[#222325] leading-[140%] tracking-[0.2%] ">
+                                        <p className="font-medium text-base text-text-dark-primary leading-[140%] tracking-[0.2%] ">
                                             The basics of user experience design
                                         </p>
                                         <div className="flex gap-4">
@@ -386,7 +386,7 @@ function DetailProduct() {
                                         </div>
                                     </div>
                                     <div className="bg-white flex justify-between border border-[#3A35411F] rounded-[10px] p-5 ">
-                                        <p className="font-medium text-base text-[#222325] leading-[140%] tracking-[0.2%] ">
+                                        <p className="font-medium text-base text-text-dark-primary leading-[140%] tracking-[0.2%] ">
                                             Jobs in the field of user experience
                                         </p>
                                         <div className="flex gap-4">
@@ -443,7 +443,7 @@ function DetailProduct() {
                                         </div>
                                     </div>
                                     <div className="bg-white flex justify-between border border-[#3A35411F] rounded-[10px] p-5 ">
-                                        <p className="font-medium text-base text-[#222325] leading-[140%] tracking-[0.2%] ">
+                                        <p className="font-medium text-base text-text-dark-primary leading-[140%] tracking-[0.2%] ">
                                             The product development life cycle
                                         </p>
                                         <div className="flex gap-4">
@@ -573,7 +573,7 @@ function DetailProduct() {
                             </div>
                         </div>
                         <div className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-poppins font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Rating dan Review
                             </p>
                             <div className="bg-white flex gap-4">
@@ -585,7 +585,7 @@ function DetailProduct() {
                                                 src="/avatar/Avatar-2.png"
                                             />
                                             <div className="flex flex-col">
-                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                     Gregorius Edrik Lawanto
                                                 </p>
                                                 <div className="">
@@ -596,7 +596,7 @@ function DetailProduct() {
                                             </div>
                                         </div>
                                         <div className="">
-                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                 Berkarier di bidang HR selama
                                                 lebih dari 3 tahun. Saat ini
                                                 bekerja sebagai Senior Talent
@@ -757,7 +757,7 @@ function DetailProduct() {
                                                 src="/avatar/Avatar-2.png"
                                             />
                                             <div className="flex flex-col">
-                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                                <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                     Gregorius Edrik Lawanto
                                                 </p>
                                                 <div className="">
@@ -768,7 +768,7 @@ function DetailProduct() {
                                             </div>
                                         </div>
                                         <div className="">
-                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                                            <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                                 Berkarier di bidang HR selama
                                                 lebih dari 3 tahun. Saat ini
                                                 bekerja sebagai Senior Talent
@@ -927,7 +927,7 @@ function DetailProduct() {
 
                 <section className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2.5">
-                        <p className="font-poppins font-semibold text-[32px] leading-[110%] text-[#222325]">
+                        <p className="font-poppins font-semibold text-[32px] leading-[110%] text-text-dark-primary">
                             Koleksi Video Pembelajaran Unggulan
                         </p>
                         <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">
@@ -937,6 +937,7 @@ function DetailProduct() {
                     <div className="grid grid-cols-3 gap-6">
                         {Article.slice(0, 3).map((item, index) => (
                             <Card
+                                key={index}
                                 image={item.image}
                                 title={item.title}
                                 description={item.description}

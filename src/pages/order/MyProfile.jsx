@@ -1,4 +1,4 @@
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Profile from "/avatar/Profile.png";
 function MyProfile() {
@@ -97,80 +97,96 @@ function MyProfile() {
                             </section>
                         </section>
                         <hr className="border border-[#3A35411F]" />
-                        <section className="flex gap-4 ">
-                            <fieldset class="border border-[#3ECF4C] rounded-[10px] px-3 ">
-                                <legend class="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#3ECF4C] bg-white px-[5px]">
-                                    Nama Lengkap
-                                </legend>
-                                <input
-                                    type="text"
-                                    className="outline-none p-2  ps-[5px] "
-                                />
-                            </fieldset>
-                            <fieldset class="border border-[#3A35411F] rounded-[10px] px-3 ">
-                                <legend class="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#333333AD] bg-white px-[5px]">
-                                    E-Mail
-                                </legend>
-                                <input
-                                    type="text"
-                                    className="outline-none p-2  ps-[5px] "
-                                />
-                            </fieldset>
-                            <button className="flex items-center text-[#333333AD] border border-[#3A35411F] rounded-md px-3 gap-2">
-                                +62
-                                <svg
-                                    className=""
-                                    width="24px"
-                                    height="24px"
-                                    viewBox="0 0 24 24"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    fill="#000000"
+                        <section className="flex gap-4 items-center ">
+                            <div className="flex flex-col">
+                                <label
+                                    htmlFor="name"
+                                    className="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#3ECF4C] bg-white px-[5px]"
                                 >
-                                    <g
-                                        id="SVGRepo_bgCarrier"
-                                        stroke-width="0"
-                                    ></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        {" "}
-                                        <title>drop-down</title>{" "}
-                                        <desc>Created with sketchtool.</desc>{" "}
+                                    Nama Lengkap
+                                </label>
+                                <input
+                                    type="text"
+                                    className="outline-none border border-[#3ECF4C] rounded-[10px] p-2"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label
+                                    htmlFor="name"
+                                    className="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#333333AD] bg-white px-[5px]"
+                                >
+                                    E-Mail
+                                </label>
+                                <input
+                                    type="text"
+                                    className="outline-none border border-[#3A35411F] rounded-[10px] p-2"
+                                />
+                            </div>
+                            <div className="flex ">
+                                <button className="flex items-center text-[#333333AD] border border-[#3A35411F] rounded-md p-2 gap-2">
+                                    +62
+                                    <svg
+                                        className=""
+                                        width="24px"
+                                        height="24px"
+                                        viewBox="0 0 24 24"
+                                        version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        fill="#000000"
+                                    >
                                         <g
-                                            id="directional"
-                                            stroke="none"
-                                            stroke-width="1"
-                                            fill="none"
-                                            fill-rule="evenodd"
-                                        >
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
                                             {" "}
-                                            <g id="drop-down" fill="#333333AD">
+                                            <title>drop-down</title>{" "}
+                                            <desc>
+                                                Created with sketchtool.
+                                            </desc>{" "}
+                                            <g
+                                                id="directional"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                fill="none"
+                                                fill-rule="evenodd"
+                                            >
                                                 {" "}
-                                                <polygon
-                                                    id="Shape"
-                                                    points="5 8 12 16 19 8"
+                                                <g
+                                                    id="drop-down"
+                                                    fill="#333333AD"
                                                 >
                                                     {" "}
-                                                </polygon>{" "}
+                                                    <polygon
+                                                        id="Shape"
+                                                        points="5 8 12 16 19 8"
+                                                    >
+                                                        {" "}
+                                                    </polygon>{" "}
+                                                </g>{" "}
                                             </g>{" "}
-                                        </g>{" "}
-                                    </g>
-                                </svg>
-                            </button>
-                            <fieldset class=" border border-[#3A35411F] rounded-[10px] px-3 ">
-                                <legend class="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#333333AD] bg-white px-[5px]">
-                                    No. Hp
-                                </legend>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div className="flex flex-col">
+                                <label
+                                    htmlFor="name"
+                                    className="flex font-medium text-sm leading-[140%] tracking-[0.2px] text-[#333333AD] bg-white px-[5px]"
+                                >
+                                    E-Mail
+                                </label>
                                 <input
                                     type="text"
-                                    className="outline-none p-2 ps-[5px] "
+                                    className="outline-none border border-[#3A35411F] rounded-[10px] p-2"
                                 />
-                            </fieldset>
+                            </div>
                         </section>
                     </section>
                 </article>

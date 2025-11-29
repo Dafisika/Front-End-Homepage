@@ -7,9 +7,10 @@ import IconTwitter from "/icon/twitter.png";
 import Card1 from "/cover/card-1.png";
 import Avatar1 from "/avatar/Avatar-1.png";
 import Article from "../../data/Article.json";
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer";
 import Card from "../../components/card/Card";
 import Navbar from "../../components/navbar/Navbar";
+import Pagination from "../../components/Pagination";
 
 function All() {
     return (
@@ -17,7 +18,7 @@ function All() {
             <Navbar account={true} />
             <main className="bg-[#FFFDF3] flex flex-col justify-center py-16 px-30 gap-9">
                 <header className="flex flex-col w-full h-full gap-2.5 ">
-                    <h1 className="font-poppins font-semibold text-[32px] leading-[110%] text-[#222325]">
+                    <h1 className="font-poppins font-semibold text-[32px] leading-[110%] text-text-dark-primary">
                         Koleksi Video Pembelajaran Unggulan
                     </h1>
                     <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">
@@ -435,23 +436,23 @@ function All() {
                                             </g>
                                         </svg>
                                     </button>
-                                    <div className="absolute top-15 right-0 bg-white w-[156px] h-[248px] flex flex-col border border-[#3E434A26] rounded-[10px] py-3.5 px-4 gap-5">
-                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#222325]">
+                                    <div className="absolute top-15 right-0 bg-white w-[156px] h-[248px] flex flex-col border border-[#3E434A26] rounded-[10px] py-3.5 px-1">
+                                        <p className=" bg-[#F4F5FA] h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                             Harga Rendah
                                         </p>
-                                        <p className="w-[156px] h-10  px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                        <p className="h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
                                             Harga Tinggi
                                         </p>
-                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                        <p className="h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
                                             A to Z
                                         </p>
-                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                        <p className="h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
                                             Z to A
                                         </p>
-                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                        <p className="h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
                                             Rating Tertinggi
                                         </p>
-                                        <p className="w-[156px] h-10 px-3 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
+                                        <p className="h-10 px-3 py-2.5 font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
                                             Rating Terendah
                                         </p>
                                     </div>

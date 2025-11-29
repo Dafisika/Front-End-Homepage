@@ -23,7 +23,7 @@ function Card(props) {
             <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
                 {description}
             </p>
-            <div className="flex  gap-2.5">
+            <div className="flex gap-2.5">
                 <img className="w-10 h-10 rounded-[10px]" src={avatar} />
                 <div className="">
                     <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">

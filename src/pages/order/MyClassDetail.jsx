@@ -1,4 +1,4 @@
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Card6 from "/cover/card-6.png";
 import Avatar1 from "/avatar/Avatar-1.png";

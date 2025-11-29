@@ -1,10 +1,9 @@
-import Navbar from "../components/navbar/Navbar";
-import Banner from "../components/Banner";
-import Card from "../components/card/Card";
-import Footer from "../components/Footer";
+import Navbar from "../../components/navbar/Navbar";
+import Banner from "../../components/Banner";
+import Card from "../../components/card/Card";
+import Footer from "../../components/Footer";
 import Avatar from "/avatar/Avatar.png";
-import banner from "/banner/banner.jpg";
-import Button from "../components/button/Button";
+import Button from "../../components/button/Button";
 import Logo from "/logo/videobelajar.png";
 import IconFb from "/icon/fb.png";
 import IconIg from "/icon/ig.png";
@@ -12,7 +11,7 @@ import IconLinkedin from "/icon/linkedin.png";
 import IconTwitter from "/icon/twitter.png";
 import Card1 from "/cover/card-1.png";
 import Avatar1 from "/avatar/Avatar-1.png";
-import Article from "../data/Article.json";
+import Article from "../../data/Article.json";
 
 function Home() {
     return (
@@ -61,6 +60,7 @@ function Home() {
                     <section className="grid grid-cols-3 gap-6">
                         {Article.map((item, index) => (
                             <Card
+                                key={index}
                                 image={item.image}
                                 title={item.title}
                                 description={item.description}
