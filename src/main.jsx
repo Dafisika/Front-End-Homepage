@@ -16,9 +16,10 @@ import MyClassDetail from "./pages/order/MyClassDetail";
 import MyProfile from "./pages/order/MyProfile";
 import Video from "./pages/collection/Video";
 import Rules from "./pages/collection/Rules";
+import Question from "./pages/collection/Question";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Rules />
+        <Question />
     </StrictMode>
 );

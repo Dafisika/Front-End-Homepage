@@ -2,7 +2,7 @@ import AsideData from "../../data/AsideProgress.json";
 import AsideProgressData from "./AsideProgressData";
 function AsideProgress() {
     return (
-        <aside className="flex flex-col border border-[#3A35411F]">
+        <aside className="flex flex-col col-span-1 border border-[#3A35411F]">
             <section className="border border-[#3A35411F] pt-6 pb-5 ps-[30px] pe-[34px]">
                 <p className="font-poppins! font-semibold text-lg text-text-dark-primary leading-[120%]">
                     Daftar Modul

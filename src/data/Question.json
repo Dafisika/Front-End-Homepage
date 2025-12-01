@@ -1,0 +1,232 @@
+[
+    {
+        "id": "Q1",
+        "number": 1,
+        "question": "Memikirkan dan mengantisipasi secara teliti adanya user secara tidak sengaja mengutak-atik konfigurasi, namun dapat diatasi dengan membuat default yang mengurangi kepanikan pada user adalah pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q2",
+        "number": 2,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q3",
+        "number": 3,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q4",
+        "number": 4,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q5",
+        "number": 5,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q6",
+        "number": 6,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q7",
+        "number": 7,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q8",
+        "number": 8,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q9",
+        "number": 9,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    },
+    {
+        "id": "Q10",
+        "number": 10,
+        "question": "Pengertian dari ...",
+        "answer": [
+            {
+                "id": "Q1-001",
+                "answer": "Memikirkan tentang default"
+            },
+            {
+                "id": "Q2-002",
+                "answer": "Memperitmbangkan page layout berdasarkan suatu tujuan tertentu"
+            },
+            {
+                "id": "Q3-003",
+                "answer": "Memastikan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga"
+            },
+            {
+                "id": "Q4-004",
+                "answer": "Menciptakan konsistensi dan menggunakan elemen UI umum"
+            }
+        ]
+    }
+]
