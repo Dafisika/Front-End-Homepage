@@ -18,7 +18,7 @@ function Home() {
         <>
             <Navbar account={true} />
 
-            <main className="bg-[#FFFDF3] flex flex-col justify-center py-16 px-5 xl:px-30 gap-6 xl:gap-16 w-dvw ">
+            <main className="bg-[#FFFDF3] flex flex-col justify-center xl:py-16 py-7 px-5 xl:px-30 gap-6 xl:gap-16 w-dvw ">
                 <div className="relative ">
                     <Banner>
                         <h1 className="font-poppins! font-bold text-2xl xl:text-5xl line leading-[110.00000000000001%] text-center text-white">

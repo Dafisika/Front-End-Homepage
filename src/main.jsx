@@ -24,6 +24,6 @@ import Certificate from "./pages/collection/Certificate";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Register />
+        <Home />
     </StrictMode>
 );
