@@ -1,8 +1,12 @@
 import Logo from "/logo/videobelajar.png";
 import Avatar from "/avatar/Avatar.png";
+import { useState } from "react";
 
 function Navbar(props) {
     const { account, payment, paymentDone } = props;
+
+    const [dropDown, setDropDown] = useState(false);
+
     return (
         <nav className="flex justify-between items-center py-3 px-6 xl:px-30 border-b border-[#3A35411F] gap-9">
             <img src={Logo} />
@@ -22,11 +26,63 @@ function Navbar(props) {
                             fill="#4A505C"
                         />
                     </svg>
-
                     <a className="font-DMSans text-base font-medium tracking-[0.2%] text-[#3a3541ad;] hidden xl:block">
                         Kategori
                     </a>
-                    <img className="hidden xl:block" src={Avatar} alt="" />
+                    .
+                    <div className="relative">
+                        <img
+                            onClick={() => setDropDown(!dropDown)}
+                            className="hidden xl:block"
+                            src={Avatar}
+                            alt=""
+                        />
+                        {dropDown && (
+                            <div
+                                className="absolute right-0 top-14 w-50 bg-white flex flex-col py-1 rounded-s-sm rounded-e-sm 
+                            shadow-[0px_18px_28px_0px_#3E434A26] gap-[5px] z-99 text-nowrap
+
+"
+                            >
+                                <a
+                                    href=""
+                                    className="border-b border-[#3A35411F] py-4 px-3 font-medium text-base text-[#333333AD] leading-[140%] tracking-[0.2px]"
+                                >
+                                    Profil Saya
+                                </a>
+                                <a
+                                    href=""
+                                    className="border-b border-[#3A35411F] py-4 px-3 font-medium text-base text-[#333333AD] leading-[140%] tracking-[0.2px]"
+                                >
+                                    Kelas Saya
+                                </a>
+                                <a
+                                    href=""
+                                    className="border-b border-[#3A35411F] py-4 px-3 font-medium text-base text-[#333333AD] leading-[140%] tracking-[0.2px]"
+                                >
+                                    Pesanan Saya
+                                </a>
+                                <a
+                                    href=""
+                                    className="flex gap-[5px] border-b border-[#3A35411F] py-4 px-3 font-medium text-base text-[#FF5C2B] leading-[140%] tracking-[0.2px]"
+                                >
+                                    Keluar
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M17 7L15.59 8.41L18.17 11H8V13H18.17L15.59 15.58L17 17L22 12L17 7ZM4 5H12V3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H12V19H4V5Z"
+                                            fill="#FF5C2B"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+                        )}
+                    </div>
                 </div>
             ) : payment ? (
                 <div className="flex items-center ">

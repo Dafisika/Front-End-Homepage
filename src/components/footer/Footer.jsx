@@ -193,7 +193,7 @@ function Footer() {
                 </section>
             </div>
 
-            <section className="mt-2.5 border-none text-[red]">
+            <section className="mt-2.5 border-none text-[#3A35411F]">
                 <hr />
             </section>
 

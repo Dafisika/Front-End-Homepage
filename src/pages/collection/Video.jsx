@@ -2,7 +2,7 @@ import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Media from "/etc/media.png";
 import Avatar1 from "/avatar/Avatar-1.png";
 import FooterProgress from "../../components/footer/FooterProgress";
-import AsideProgress from "../../components/aside/AsideProgress";
+import AsideProgress from "../../components/asideCollection/AsideProgress";
 
 function Video() {
     return (

@@ -1,10 +1,10 @@
-import AsideProgress from "../../components/aside/AsideProgress";
+import AsideProgress from "../../components/asideCollection/AsideProgress";
 import Button from "../../components/button/Button";
 import FooterProgress from "../../components/footer/FooterProgress";
 import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Rule from "/etc/rules.png";
 import AsideData from "../../data/AsideProgress.json";
-import AsideProgressData from "../../components/aside/AsideProgressData";
+import AsideProgressData from "../../components/asideCollection/AsideProgressData";
 
 function Rules() {
     return (
