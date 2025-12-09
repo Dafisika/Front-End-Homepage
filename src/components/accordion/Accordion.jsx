@@ -3,7 +3,7 @@ function Accordion(props) {
     return (
         <>
             <section className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
+                <p className="font-poppins font-semibold text-xl leading-[120%] text-text-dark-primary">
                     Tata Cara Pembayaran
                 </p>
                 <div className="flex flex-col gap-2.5">

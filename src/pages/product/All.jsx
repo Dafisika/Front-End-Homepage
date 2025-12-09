@@ -11,8 +11,8 @@ import Footer from "../../components/footer/Footer";
 import Card from "../../components/card/Card";
 import Navbar from "../../components/navbar/Navbar";
 import Pagination from "../../components/Pagination";
-import AsideProduct from "../../components/asideProduct/AsideProduct";
-import DropDownFilter from "../../components/dropDown/DropDownFilter";
+import AsideProductDropDown from "../../components/productDropDown/AsideProductDropDown";
+import DropDownFilter from "../../components/productDropDown/DropDownFilter";
 
 function All() {
     return (
@@ -28,7 +28,7 @@ function All() {
                     </p>
                 </header>
                 <div className="flex gap-[42px]">
-                    <AsideProduct />
+                    <AsideProductDropDown />
                     <article className="w-full flex flex-col gap-8">
                         <DropDownFilter />
 
