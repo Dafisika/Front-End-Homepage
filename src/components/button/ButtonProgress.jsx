@@ -1,5 +1,5 @@
 function ButtonProgress(props) {
-    const { number, totalQuestion } = props;
+    const { number, totalQuestion, onNext } = props;
     return (
         <div className="flex justify-center gap-4">
             <button
@@ -26,6 +26,7 @@ function ButtonProgress(props) {
                 Sebelumnya
             </button>
             <button
+                onClick={onNext}
                 className={`${
                     number + 1 <= totalQuestion
                         ? "bg-[#3ECF4C] text-white"

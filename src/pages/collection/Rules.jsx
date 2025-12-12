@@ -5,8 +5,20 @@ import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Rule from "/etc/rules.png";
 import AsideData from "../../data/AsideProgress.json";
 import AsideProgressData from "../../components/asideCollection/AsideProgressData";
+import Question from "../../data/Question.json";
 
 function Rules() {
+    const question = Question;
+    function onStoreData() {
+        const quiz = localStorage.getItem("quiz");
+        if (!quiz) {
+            localStorage.setItem(
+                "quiz",
+                JSON.stringify(question.map((q) => ({ ...q, answered: "" })))
+            );
+        }
+    }
+
     return (
         <>
             <NavbarProgress />
@@ -37,6 +49,7 @@ function Rules() {
                         </div>
                         <div className="">
                             <Button
+                                onClick={onStoreData}
                                 text="Mulai Pre-Test"
                                 customStyle="bg-[#3ecf4c] text-white"
                             />
