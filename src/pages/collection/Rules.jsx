@@ -5,6 +5,7 @@ import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Rule from "/etc/rules.png";
 import AsideProgressData from "../../components/asideCollection/AsideProgressData";
 import Class from "../../data/Class.json";
+import { useEffect, useState } from "react";
 
 function Rules() {
     const question = Class;
@@ -18,9 +19,43 @@ function Rules() {
         }
     }
 
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch("http://localhost:3000/class");
+            console.log(response);
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: $(response.status)`);
+            }
+            const data = await response.json();
+
+            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
+            setData(data.find((item) => item.id === "C-001"));
+        } catch (err) {
+            console.error(
+                "Fetch Modern (console): Tejadi Kesalahan",
+                err.message
+            );
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    console.log(data);
+    console.log(error);
+    console.log(loading);
+
     return (
         <>
-            <NavbarProgress />
+            <NavbarProgress data={data && data?.detail_class} />
             <main className="grid grid-cols-3">
                 <section className="flex flex-col col-span-2">
                     <img src={Rule} alt="" />
@@ -55,7 +90,7 @@ function Rules() {
                         </div>
                     </section>
                 </section>
-                <AsideProgress />
+                <AsideProgress data={data && data?.detail_class} />
             </main>
             <FooterProgress />
         </>

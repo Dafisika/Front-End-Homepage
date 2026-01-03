@@ -25,6 +25,6 @@ import ClassDetail from "./components/detailOrder/ClassDetail";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Video />
+        <Question />
     </StrictMode>
 );

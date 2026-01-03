@@ -6,7 +6,7 @@ function AsideQuestion(props) {
             <p className="font-poppins! font-semibold text-lg leading-[120%] text-text-dark-primary">
                 List Soal
             </p>
-            <div className="grid grid-cols-5 ">
+            <div className="grid grid-cols-5 gap-[18px] justify-between text-nowrap ">
                 {questions
                     .sort((a, b) => a.number - b.number)
                     .map((item, index) => (
