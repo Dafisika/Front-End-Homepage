@@ -3,9 +3,9 @@ import AsideProgressData from "./AsideProgressData";
 import Class from "../../data/Class.json";
 
 function AsideProgress(props) {
-    const { data } = props;
+    const { data, onReview } = props;
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     return (
         <aside className=" flex-col col-span-1  border border-[#3A35411F]">
@@ -44,7 +44,7 @@ function AsideProgress(props) {
                         </svg>
                     </div>
                     {open &&
-                        data.map((item, index) => (
+                        data?.map((item, index) => (
                             <AsideProgressData
                                 key={index}
                                 title={item.title}
@@ -76,7 +76,10 @@ function AsideProgress(props) {
                     </div>
                 </div>
             </section>
-            <section className="bg-[#FFBD3A] bottom-0 right-0 flex border border-[#3A35411F] py-4 px-9 gap-2">
+            <button
+                onClick={onReview}
+                className="bg-[#FFBD3A] w-full bottom-0 right-0 flex border border-[#3A35411F] py-4 px-9 gap-2"
+            >
                 <svg
                     width="20"
                     height="20"
@@ -98,7 +101,7 @@ function AsideProgress(props) {
                 <p className="font-bold text-base text-white leading-[120%]">
                     Beri Review & Rating
                 </p>
-            </section>
+            </button>
         </aside>
     );
 }

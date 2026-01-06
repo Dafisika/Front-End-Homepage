@@ -1,7 +1,7 @@
 import Button from "../button/Button";
 
 function Modal(props) {
-    const { ModalImage } = props;
+    const { ModalImage, onSubmit, onClose } = props;
     return (
         <section className="bg-[rgba(0,0,0,0.5)] flex justify-center items-center absolute overflow-hidden top-0 left-0 w-full h-full">
             <div className="bg-white flex flex-col rounded-[10px] pt-6 px-9 pb-9 gap-[18px]">
@@ -16,10 +16,12 @@ function Modal(props) {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <Button
+                        onClick={onClose}
                         text="Batal"
                         customStyle="bg-white border! border-[#3ECF4C] text-[#3ECF4C]"
                     />
                     <Button
+                        onClick={onSubmit}
                         text="Selesai"
                         customStyle="bg-[#3ecf4c] text-white"
                     />

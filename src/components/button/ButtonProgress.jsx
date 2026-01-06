@@ -1,7 +1,7 @@
 function ButtonProgress(props) {
-    const { number, totalQuestion, onNext } = props;
+    const { number, totalQuestion, onNext, onSubmit } = props;
     return (
-        <div className="flex justify-center gap-4">
+        <div className="grid grid-cols-2 justify-center gap-4">
             <button
                 className={`${
                     number === 1
@@ -9,7 +9,7 @@ function ButtonProgress(props) {
                         : number > 1
                         ? "bg-white border border-[#3ECF4C] text-[#3ECF4C]"
                         : null
-                } flex h-full text-center outline-none rounded-[10px] py-2.5 px-[26px] gap-2 pointer font-bold text-base font-DMSans`}
+                } flex h-full text-center outline-none rounded-[10px] py-2.5 justify-center gap-2 pointer font-bold text-base font-DMSans`}
             >
                 <svg
                     width="24"
@@ -26,12 +26,12 @@ function ButtonProgress(props) {
                 Sebelumnya
             </button>
             <button
-                onClick={onNext}
+                onClick={totalQuestion >= number + 1 ? onNext : onSubmit}
                 className={`${
                     number + 1 <= totalQuestion
                         ? "bg-[#3ECF4C] text-white"
                         : "bg-[#FFBD3A] text-white"
-                } h-full text-center outline-none rounded-[10px]  px-[26px] pointer font-bold text-base font-DMSans flex items-center gap-2 py-2.5 px-[26px`}
+                } h-full text-center outline-none rounded-[10px] justify-center pointer font-bold text-base font-DMSans flex items-end gap-2 py-2.5`}
             >
                 {totalQuestion >= number + 1 ? "Selanjutnya" : "Selesai"}
                 <svg
