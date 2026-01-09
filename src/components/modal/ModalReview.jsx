@@ -12,7 +12,9 @@ function ModalReview(props) {
     const [error, setError] = useState(false);
     const onSubmit = async () => {
         try {
-            const response = await apiClient.post("/review");
+            const response = await apiClient.post(
+                import.meta.env.VITE_API_URL + "/review"
+            );
             console.log(response);
             if (!response.status === 201) {
                 throw new Error(`HTTP Error! Status: $(response.status)`);

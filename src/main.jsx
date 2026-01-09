@@ -22,9 +22,13 @@ import TryAgain from "./pages/collection/TryAgain";
 import Summary from "./pages/collection/Summary";
 import Certificate from "./pages/collection/Certificate";
 import ClassDetail from "./components/detailOrder/ClassDetail";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Summary />
+        <Provider store={store}>
+            <Home />
+        </Provider>
     </StrictMode>
 );

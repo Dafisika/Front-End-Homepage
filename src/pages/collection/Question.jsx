@@ -29,7 +29,9 @@ function Question() {
 
     const fetchData = async () => {
         try {
-            const response = await apiClient.get("/class");
+            const response = await apiClient.get(
+                import.meta.env.VITE_API_URL + "/class"
+            );
             console.log(response);
             if (!response.status === 200) {
                 throw new Error(`HTTP Error! Status: $(response.status)`);
@@ -59,7 +61,7 @@ function Question() {
 
         try {
             const response = await apiClient.post(
-                "/class",
+                import.meta.env.VITE_API_URL + "/class",
                 JSON.stringify(JSON.parse(localStorage.getItem("quiz")))
             );
 

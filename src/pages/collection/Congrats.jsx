@@ -18,7 +18,9 @@ function Congrats() {
     const [error, setError] = useState(false);
     const fetchData = async () => {
         try {
-            const response = await apiClient.get("/class");
+            const response = await apiClient.get(
+                import.meta.env.VITE_API_URL + "/class"
+            );
             console.log(response);
             if (!response.status === 200) {
                 throw new Error(`HTTP Error! Status: $(response.status)`);
