@@ -54,7 +54,7 @@ function OrderDetail(props) {
                 <div className="flex items-center gap-4">
                     <img
                         className="border-none rounded-[10px] w-[52px] h-[52px]"
-                        src={image}
+                        src={image ?? ""}
                         alt=""
                     />
                     <p className="font-medium text-lg leading-[140%] tracking-[0.2px] text-text-dark-primary">

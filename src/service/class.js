@@ -1,6 +1,6 @@
 import { apiClient } from "../../library/apiClient";
 
-export const fetchData = async () => {
+export const fetchClass = async () => {
     try {
         const response = await apiClient.get(
             import.meta.env.VITE_API_URL + "/class"
@@ -12,6 +12,24 @@ export const fetchData = async () => {
         const data = await response.data;
 
         console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
+        return { data: data };
+    } catch (err) {
+        console.error("Fetch Modern (console): Tejadi Kesalahan", err.message);
+        return { eror: err.message };
+    }
+};
+export const fetchClassById = async () => {
+    try {
+        const response = await apiClient.get(
+            import.meta.env.VITE_API_URL + "/class"
+        );
+        console.log(response);
+        if (!response.status === 200) {
+            throw new Error(`HTTP Error! Status: $(response.status)`);
+        }
+        const data = await response.data;
+
+        // console.log("Fetch By ID (console): Data Berhasil Di Ambil", data);
         return { data: data.find((item) => item.id === "C-001") };
     } catch (err) {
         console.error("Fetch Modern (console): Tejadi Kesalahan", err.message);

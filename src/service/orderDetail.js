@@ -1,9 +1,9 @@
 import { apiClient } from "../../library/apiClient";
 
-export const fetchArticle = async () => {
+export const fetchOrderDetail = async () => {
     try {
         const response = await apiClient.get(
-            import.meta.env.VITE_API_URL + "/article"
+            import.meta.env.VITE_API_URL + "/order-detail"
         );
 
         if (!response.status === 200) {

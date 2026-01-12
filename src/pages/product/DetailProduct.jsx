@@ -13,45 +13,21 @@ import Banner from "../../components/Banner";
 import Button from "../../components/button/Button";
 import Product from "../../components/Product";
 import DetailProductDropDown from "../../components/productDropDown/DetailProductDropDown";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Loading from "../../components/Loading";
-import { apiClient } from "../../../library/apiClient";
 import Error from "../../components/Error";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchArticleAsync } from "../../redux/article/slice";
 
 function DetailProduct() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    const fetchData = async () => {
-        try {
-            const response = await apiClient.get(
-                import.meta.env.VITE_API_URL + "/article"
-            );
-
-            if (!response.status === 200) {
-                throw new Error(`HTTP Error! Status: $(response.status)`);
-            }
-            const data = await response.data;
-
-            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
-            setData(data);
-        } catch (err) {
-            console.error(
-                "Fetch Modern (console): Tejadi Kesalahan",
-                err.message
-            );
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const dispatch = useDispatch();
+    const { data, error, isLoading } = useSelector((state) => state.article);
 
     useEffect(() => {
-        fetchData();
-    }, []);
+        dispatch(fetchArticleAsync());
+    }, [dispatch]);
 
-    if (loading) {
+    if (isLoading) {
         return <Loading />;
     }
 
@@ -709,7 +685,7 @@ function DetailProduct() {
                             </p>
                         </div>
                         <div className="grid grid-cols-3 gap-6">
-                            {data.slice(0, 3).map((item, index) => (
+                            {data?.data?.slice(0, 3).map((item, index) => (
                                 <Card
                                     key={index}
                                     image={item.image}

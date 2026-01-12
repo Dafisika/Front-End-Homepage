@@ -1,6 +1,6 @@
 import { apiClient } from "../../library/apiClient";
 
-export const fetchData = async () => {
+export const fetchReview = async () => {
     try {
         const response = await apiClient.get(
             import.meta.env.VITE_API_URL + "/review"

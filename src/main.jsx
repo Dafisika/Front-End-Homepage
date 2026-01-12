@@ -10,8 +10,7 @@ import Payment from "./pages/payment/Payment";
 import PaymentMethod from "./pages/payment/PaymentMethod";
 import ChangePaymentMethod from "./pages/payment/ChangePaymentMethod";
 import DoneOrPending from "./pages/payment/DoneOrPending";
-import OrderDetailProduct from "./pages/order/MyOrderDetailProduct";
-import MyOrderDetailProduct from "./pages/order/MyOrderDetailProduct";
+import MyOrderDetail from "./pages/order/MyOrderDetail.jsx";
 import MyClassDetail from "./pages/order/MyClassDetail";
 import MyProfile from "./pages/order/MyProfile";
 import Video from "./pages/collection/Video";
@@ -28,7 +27,7 @@ import store from "./redux/store";
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Provider store={store}>
-            <Home />
+            <Congrats />
         </Provider>
     </StrictMode>
 );

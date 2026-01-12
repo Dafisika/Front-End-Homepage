@@ -1,24 +1,25 @@
-import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
-import Card6 from "/cover/card-6.png";
-import Avatar1 from "/avatar/Avatar-1.png";
+import OrderDetail from "../../components/order/OrderDetail";
+import Card1 from "/cover/card-1.png";
 import Pagination from "../../components/Pagination";
-import Button from "../../components/button/Button";
-import ClassDetail from "../../components/detailOrder/ClassDetail";
-import { useEffect } from "react";
+import Footer from "../../components/footer/Footer";
+import DropDownFilter from "../../components/productDropDown/DropDownFilter";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchClassAsync } from "../../redux/class/slice";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
+import { useEffect } from "react";
+import { fetchOrderDetailAsync } from "../../redux/orderDetail/slice";
 
-function MyClassDetail() {
+function MyOrderDetail() {
     const dispatch = useDispatch();
-    const { data, error, isLoading } = useSelector((state) => state.class);
+    const { data, error, isLoading } = useSelector(
+        (state) => state.orderDetail
+    );
 
     useEffect(() => {
-        dispatch(fetchClassAsync());
+        dispatch(fetchOrderDetailAsync());
     }, [dispatch]);
-    console.log("State Data: ", data);
+
     if (isLoading) {
         return <Loading />;
     }
@@ -32,11 +33,10 @@ function MyClassDetail() {
                         <aside className="flex flex-col gap-6">
                             <div className="flex flex-col gap-2.5">
                                 <h1 className="font-poppins! font-semibold text-xl text-text-dark-primary leading-[120%]">
-                                    Daftar Kelas
+                                    Daftar Pesanan
                                 </h1>
                                 <p className="font-normal text-base text-[#333333AD] leading-[140%] tracking-[0.2%]">
-                                    Akses Materi Belajar dan Mulailah
-                                    Meningkatkan Pengetahuan Anda!
+                                    Informasi terperinci mengenai pembelian
                                 </p>
                             </div>
                             <div className="bg-white flex flex-col border border-[#3A35411F] rounded-10 gap-2 p-6 ">
@@ -99,70 +99,36 @@ function MyClassDetail() {
                         </aside>
                         <section className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-5 gap-8">
                             <div className="flex gap-8 ">
-                                <div className="flex  w-full gap-1.5 py-3 pe-9 font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
+                                <div className="flex overflow-x-auto w-full gap-1.5 py-3 pe-9 font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
                                     <div className="flex flex-col text-nowrap py-3 pe-9 gap-1.5">
-                                        Semua Kelas
+                                        Semua Pesanan
                                         <hr className="w-[52px] h-1.5 border-none outline-none rounded-[10px] bg-[#f64920]" />
                                     </div>
                                     <div className="text-nowrap py-3 pe-9">
-                                        Sedang Berjalan
+                                        Menunggu
                                     </div>
                                     <div className="text-nowrap py-3 pe-9">
-                                        Selesai
+                                        Berhasil
+                                    </div>
+                                    <div className="text-nowrap py-3 pe-9">
+                                        Gagal
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 ">
-                                    <div className="flex gap-[3px]">
-                                        <div className="flex items-center h-12 border border-[#3A35411F] rounded-[10px] px-3">
-                                            <input
-                                                className="flex items-center placeholder:text-[#333333AD] gap-2"
-                                                type="text"
-                                                placeholder="Cari Kelas"
-                                            />
-                                            <svg
-                                                width="24px"
-                                                height="24px"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g
-                                                    id="SVGRepo_bgCarrier"
-                                                    stroke-width="0"
-                                                ></g>
-                                                <g
-                                                    id="SVGRepo_tracerCarrier"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                ></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    {" "}
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M17.0392 15.6244C18.2714 14.084 19.0082 12.1301 19.0082 10.0041C19.0082 5.03127 14.9769 1 10.0041 1C5.03127 1 1 5.03127 1 10.0041C1 14.9769 5.03127 19.0082 10.0041 19.0082C12.1301 19.0082 14.084 18.2714 15.6244 17.0392L21.2921 22.707C21.6828 23.0977 22.3163 23.0977 22.707 22.707C23.0977 22.3163 23.0977 21.6828 22.707 21.2921L17.0392 15.6244ZM10.0041 17.0173C6.1308 17.0173 2.99087 13.8774 2.99087 10.0041C2.99087 6.1308 6.1308 2.99087 10.0041 2.99087C13.8774 2.99087 17.0173 6.1308 17.0173 10.0041C17.0173 13.8774 13.8774 17.0173 10.0041 17.0173Z"
-                                                        fill="#333333AD"
-                                                    ></path>{" "}
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
+                                    <DropDownFilter />
                                 </div>
                             </div>
                             <section className="flex flex-col col-span-5 gap-6">
                                 {data?.data?.map((item, index) => (
-                                    <ClassDetail
+                                    <OrderDetail
                                         key={index}
-                                        modul={item.modul}
+                                        noInvoice={item.noInvoice}
+                                        waktuPembayaran={item.waktuPembayaran}
                                         status={item.status}
-                                        image={item.image}
-                                        title={item.title}
-                                        description={item.description}
-                                        name={item.user.name}
-                                        avatar={item.user.avatar}
-                                        position={item.user.position}
-                                        company={item.user.company}
-                                        progress={item.progress}
+                                        image={item?.orderDetail.image}
+                                        detail={item.orderDetail.detail}
+                                        harga={item.orderDetail.harga}
+                                        totalPembayaran={item.totalPembayaran}
                                     />
                                 ))}
                             </section>
@@ -177,4 +143,4 @@ function MyClassDetail() {
         </>
     );
 }
-export default MyClassDetail;
+export default MyOrderDetail;

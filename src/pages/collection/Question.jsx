@@ -11,12 +11,10 @@ import Class from "../../data/Class.json";
 import { apiClient } from "../../../library/apiClient";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
+import { fetchClassByIdAsync } from "../../redux/class/slice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Question() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
     const [body, setBody] = useState(true);
     const [message, setMessage] = useState(null);
 
@@ -27,33 +25,12 @@ function Question() {
 
     const [modal, setModal] = useState(false);
 
-    const fetchData = async () => {
-        try {
-            const response = await apiClient.get(
-                import.meta.env.VITE_API_URL + "/class"
-            );
-            console.log(response);
-            if (!response.status === 200) {
-                throw new Error(`HTTP Error! Status: $(response.status)`);
-            }
-            const data = await response.data;
-
-            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
-            setData(data.find((item) => item.id === "C-001"));
-        } catch (err) {
-            console.error(
-                "Fetch Modern (console): Tejadi Kesalahan",
-                err.message
-            );
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const dispatch = useDispatch();
+    const { detail, error, isLoading } = useSelector((state) => state.class);
 
     useEffect(() => {
-        fetchData();
-    }, []);
+        dispatch(fetchClassByIdAsync());
+    }, [dispatch]);
 
     const handleSumbit = async (e) => {
         e.preventDefault();
@@ -78,10 +55,6 @@ function Question() {
             setBody(false);
         }
     };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     console.log(body);
     console.log(message);
@@ -112,13 +85,13 @@ function Question() {
         }
     }
 
-    if (loading) {
+    if (isLoading) {
         return <Loading />;
     }
 
     return (
         <>
-            <NavbarProgress data={data && data?.detail_class} />
+            <NavbarProgress data={detail && detail?.data?.detail_class} />
             {!error ? (
                 <main className="grid grid-cols-4">
                     <AsideQuestion
@@ -151,7 +124,9 @@ function Question() {
                             totalQuestion={question.length}
                         />
                     </section>
-                    <AsideProgress data={data && data?.detail_class} />
+                    <AsideProgress
+                        data={detail && detail?.data?.detail_class}
+                    />
                 </main>
             ) : (
                 <Error />

@@ -11,45 +11,21 @@ import IconLinkedin from "/icon/linkedin.png";
 import IconTwitter from "/icon/twitter.png";
 import Card1 from "/cover/card-1.png";
 import Avatar1 from "/avatar/Avatar-1.png";
-import { useEffect, useState } from "react";
-import { apiClient } from "../../../library/apiClient";
+import { useEffect } from "react";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchArticleAsync } from "../../redux/article/slice";
 
 function Home() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    const fetchData = async () => {
-        try {
-            const response = await apiClient.get(
-                import.meta.env.VITE_API_URL + "/article"
-            );
-
-            if (!response.status === 200) {
-                throw new Error(`HTTP Error! Status: $(response.status)`);
-            }
-            const data = await response.data;
-
-            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
-            setData(data);
-        } catch (err) {
-            console.error(
-                "Fetch Modern (console): Tejadi Kesalahan",
-                err.message
-            );
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
-    };
-
+    const dispatch = useDispatch();
+    const { data, error, isLoading } = useSelector((state) => state.article);
     useEffect(() => {
-        fetchData();
-    }, []);
+        dispatch(fetchArticleAsync());
+    }, [dispatch]);
+    console.log(data);
 
-    if (loading) {
+    if (isLoading) {
         return <Loading />;
     }
 
@@ -98,7 +74,7 @@ function Home() {
                             <div className="feature">Bisnis</div>
                         </section>
                         <section className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-                            {data.map((item, index) => (
+                            {data?.data?.map((item, index) => (
                                 <Card
                                     key={index}
                                     image={item.image}
