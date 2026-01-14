@@ -29,7 +29,6 @@ export const fetchClassById = async () => {
         }
         const data = await response.data;
 
-        // console.log("Fetch By ID (console): Data Berhasil Di Ambil", data);
         return { data: data.find((item) => item.id === "C-001") };
     } catch (err) {
         console.error("Fetch Modern (console): Tejadi Kesalahan", err.message);
@@ -37,9 +36,7 @@ export const fetchClassById = async () => {
     }
 };
 
-export const handleSumbit = async (e) => {
-    e.preventDefault();
-
+export const createHandleSubmit = async () => {
     try {
         const response = await apiClient.post(
             import.meta.env.VITE_API_URL + "/class",

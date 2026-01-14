@@ -27,7 +27,7 @@ import store from "./redux/store";
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Provider store={store}>
-            <Congrats />
+            <All />
         </Provider>
     </StrictMode>
 );

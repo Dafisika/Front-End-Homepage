@@ -1,48 +1,37 @@
 import { useState } from "react";
 import Button from "../button/Button";
-import { apiClient } from "../../../library/apiClient";
 import Loading from "../Loading";
+import { useDispatch, useSelector } from "react-redux";
+import { postReviewAsync } from "../../redux/review/slice";
 
 function ModalReview(props) {
     const { onClose } = props;
     const [star, setStar] = useState(0);
+    const [review, setReview] = useState("");
 
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-    const onSubmit = async () => {
-        try {
-            const response = await apiClient.post(
-                import.meta.env.VITE_API_URL + "/review"
-            );
-            console.log(response);
-            if (!response.status === 201) {
-                throw new Error(`HTTP Error! Status: $(response.status)`);
-            }
-            const data = await response.data;
+    const dispatch = useDispatch();
+    const { data, error, isLoading } = useSelector((state) => state.review);
 
-            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
-            setData();
-        } catch (err) {
-            console.error(
-                "Fetch Modern (console): Tejadi Kesalahan",
-                err.message
-            );
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
+    const onChangeReview = (e) => {
+        setReview(e.target.value);
     };
 
-    if (loading) {
-        return <Loading />;
-    }
+    const onReview = async (e) => {
+        e.preventDefault();
+        dispatch(
+            postReviewAsync({
+                star,
+                review,
+            })
+        );
+    };
 
     const onClickStar = (value) => {
         setStar(value);
     };
-
-    console.log(star);
+    if (isLoading) {
+        return <Loading />;
+    }
     return (
         <section className="bg-[rgba(0,0,0,0.5)] flex justify-center items-center overflow-hidden absolute top-0 left-0 w-full h-full">
             <div className="bg-white flex flex-col rounded-[10px] p-9 gap-[18px]">
@@ -92,6 +81,7 @@ function ModalReview(props) {
                 </div>
                 <textarea
                     rows={3}
+                    onChange={onChangeReview}
                     className="border border-[#3A35411F] rounded-[10px] px-3 py-3 font-medium text-base text-[#333333AD] leading-[140%] tracking-[0.2px]"
                 >
                     Masukkan Review
@@ -106,7 +96,7 @@ function ModalReview(props) {
                         customStyle="bg-white border! border-[#3ECF4C] text-[#3ECF4C]"
                     />
                     <Button
-                        onClick={onSubmit}
+                        onClick={onReview}
                         text="Selesai"
                         customStyle="bg-[#3ecf4c] text-white"
                     />

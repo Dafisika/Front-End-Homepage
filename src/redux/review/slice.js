@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchReview } from "../../service/review";
+import { createReview } from "../../service/review";
 
-export const fetchReviewAsync = createAsyncThunk(
+export const postReviewAsync = createAsyncThunk(
     "review/fetchReview",
-    async () => {
-        const response = await fetchReview();
+    async (data) => {
+        const response = await createReview(data);
         return response;
     }
 );
@@ -12,7 +12,7 @@ export const fetchReviewAsync = createAsyncThunk(
 const initialState = {
     data: [],
     error: "",
-    isLoading: true,
+    isLoading: false,
 };
 export const reviewSlice = createSlice({
     name: "review",
@@ -20,15 +20,15 @@ export const reviewSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchReviewAsync.pending, (state) => {
+            .addCase(postReviewAsync.pending, (state) => {
                 state.isLoading = true;
                 state.error = null;
             })
-            .addCase(fetchReviewAsync.fulfilled, (state, action) => {
+            .addCase(postReviewAsync.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.data = action.payload;
             })
-            .addCase(fetchReviewAsync.rejected, (state, action) => {
+            .addCase(postReviewAsync.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload.error;
             });

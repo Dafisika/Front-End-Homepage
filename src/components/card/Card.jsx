@@ -1,38 +1,31 @@
-function Card(props) {
-    const {
-        image,
-        title,
-        description,
-        avatar,
-        name,
-        position,
-        company,
-        rating,
-        review,
-        price,
-    } = props;
+import { currencyFormat } from "../../utils/number.utils";
 
-    const convertIdr = price > 1000 ? price / 1000 + "K" : price;
+function Card(props) {
+    const { data } = props;
 
     return (
         <div className="flex flex-col w-full bg-white border border-[#3A35411F] rounded-[10px] p-5 gap-4">
-            <img className="w-full h-[193px]" src={image} />
+            {data.image && <img src={data.image} />}
+
             <h3 className="font-DMSans font-semibold text-lg text-text-dark-primary leading-[120%]">
-                {title}
+                {data.title}
             </h3>
-            <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                {description}
+            <p className="font-medium text-base line-clamp-2 leading-[140%] tracking-[0.2%] text-[#333333ad]">
+                {data.description}
             </p>
             <div className="flex gap-2.5">
-                <img className="w-10 h-10 rounded-[10px]" src={avatar} />
+                <img
+                    className="w-10 h-10 rounded-[10px]"
+                    src={data.user.avatar}
+                />
                 <div className="">
                     <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
-                        {name}
+                        {data.user.name}
                     </p>
                     <p className="font-normal text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                        {position}{" "}
+                        {data.user.position}{" "}
                         <span className="font-bold text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                            {company}
+                            {data.user.company}
                         </span>
                     </p>
                 </div>
@@ -161,12 +154,12 @@ function Card(props) {
 
                     <div className="flex font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333ad] underline decoration-solid">
                         <p>
-                            {rating} {review}
+                            {data.testimonial.rating} {data.testimonial.review}
                         </p>
                     </div>
                 </div>
                 <div className="font-semibold text-2xl leading-[120%] text-[#3ecf4c]">
-                    <p>Rp {convertIdr}</p>
+                    <p>Rp {currencyFormat(data.price_normal)}</p>
                 </div>
             </div>
         </div>

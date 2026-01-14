@@ -8,16 +8,12 @@ import ModalImage from "/etc/modal_image.png";
 import Modal from "../../components/modal/Modal";
 import { useEffect, useState } from "react";
 import Class from "../../data/Class.json";
-import { apiClient } from "../../../library/apiClient";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
-import { fetchClassByIdAsync } from "../../redux/class/slice";
+import { fetchClassByIdAsync, postHandleSubmit } from "../../redux/class/slice";
 import { useDispatch, useSelector } from "react-redux";
 
 function Question() {
-    const [body, setBody] = useState(true);
-    const [message, setMessage] = useState(null);
-
     const number = 10;
     const question = JSON.parse(localStorage.getItem("quiz"));
     const selectedQuestion = question.find((q) => q.number === number);
@@ -32,32 +28,10 @@ function Question() {
         dispatch(fetchClassByIdAsync());
     }, [dispatch]);
 
-    const handleSumbit = async (e) => {
+    const onHandleSubmit = async (e) => {
         e.preventDefault();
-        setMessage("Mengirim");
-
-        try {
-            const response = await apiClient.post(
-                import.meta.env.VITE_API_URL + "/class",
-                JSON.stringify(JSON.parse(localStorage.getItem("quiz")))
-            );
-
-            if (!response.status === 201) {
-                throw new Error(`HTTP Error! Status: $(response.status)`);
-            }
-            const data = await response.data;
-
-            console.log("Sukses:", data);
-        } catch (err) {
-            console.error("Tejadi Kesalahan", err.message);
-            setMessage(err.message);
-        } finally {
-            setBody(false);
-        }
+        dispatch(postHandleSubmit());
     };
-
-    console.log(body);
-    console.log(message);
 
     function onAnswerChange(e) {
         setAnswer(e.target.value);
@@ -136,7 +110,7 @@ function Question() {
                 <Modal
                     ModalImage={ModalImage}
                     onClose={onModal}
-                    onSubmit={handleSumbit}
+                    onSubmit={onHandleSubmit}
                 />
             )}
         </>

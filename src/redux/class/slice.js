@@ -1,5 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchClass, fetchClassById } from "../../service/class";
+import {
+    createHandleSubmit,
+    fetchClass,
+    fetchClassById,
+} from "../../service/class";
 
 export const fetchClassAsync = createAsyncThunk(
     "class/fetchClass",
@@ -12,6 +16,13 @@ export const fetchClassByIdAsync = createAsyncThunk(
     "class/fetchClassById",
     async () => {
         const response = await fetchClassById();
+        return response;
+    }
+);
+export const postHandleSubmit = createAsyncThunk(
+    "class/postHandleSubmit",
+    async () => {
+        const response = await createHandleSubmit();
         return response;
     }
 );
@@ -49,6 +60,17 @@ export const classSlice = createSlice({
                 state.detail = action.payload;
             })
             .addCase(fetchClassByIdAsync.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload.error;
+            })
+            .addCase(postHandleSubmit.pending, (state) => {
+                state.isLoading = true;
+                state.error = null;
+            })
+            .addCase(postHandleSubmit.fulfilled, (state) => {
+                state.isLoading = false;
+            })
+            .addCase(postHandleSubmit.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload.error;
             });
