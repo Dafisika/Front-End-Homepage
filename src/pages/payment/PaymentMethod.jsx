@@ -27,7 +27,6 @@ function PaymentMethod() {
     useEffect(() => {
         dispatch(fetchArticleByIdAsync());
     }, [dispatch]);
-    console.log(data);
 
     if (isLoading) {
         return <Loading />;

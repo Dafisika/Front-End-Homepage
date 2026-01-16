@@ -3,6 +3,8 @@ import articleReducer from "./article/slice";
 import orderDetailReducer from "./orderDetail/slice";
 import classReducer from "./class/slice";
 import reviewReducer from "./review/slice";
+import howToPaymentReducer from "./howToPayment/slice";
+import transactionReducer from "./transaction/slice";
 
 export default configureStore({
     reducer: {
@@ -10,5 +12,7 @@ export default configureStore({
         orderDetail: orderDetailReducer,
         class: classReducer,
         review: reviewReducer,
+        howToPayment: howToPaymentReducer,
+        transaction: transactionReducer,
     },
 });

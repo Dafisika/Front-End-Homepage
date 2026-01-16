@@ -13,10 +13,10 @@ function Product(props) {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <p className="font-semibold text-lg leading-[120%] text-[#3ECF4C]">
-                            Rp {currencyFormat(data.price_discount)}
+                            Rp{currencyFormat(data.price_discount)}
                         </p>
                         <p className="font-semibold text-lg leading-[120%] text-[#3A354161] line-through">
-                            Rp {currencyFormat(data.price_normal)}
+                            Rp{currencyFormat(data.price_normal)}
                         </p>
                     </div>
                     <div className="bg-[#FFBD3A] flex border-none rounded-[10px] py-1 px-2.5 gap-1 ">
@@ -45,7 +45,7 @@ function Product(props) {
                     Kelas Ini Sudah Termasuk
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                    {data.includes.final_exam ? (
+                    {data.includes?.final_exam ? (
                         <div className="flex items-center gap-2">
                             <svg
                                 width="24"
@@ -69,7 +69,7 @@ function Product(props) {
                             </p>
                         </div>
                     ) : null}
-                    {data.includes.document ? (
+                    {data.includes?.document ? (
                         <div className="flex items-center gap-2">
                             <svg
                                 width="24"
@@ -107,11 +107,11 @@ function Product(props) {
                             </svg>
 
                             <p className="font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
-                                {data.includes.document} Dokumen
+                                {data.includes?.document} Dokumen
                             </p>
                         </div>
                     ) : null}
-                    {data.includes.pre_test ? (
+                    {data.includes?.pre_test ? (
                         <div className="flex  items-center gap-2">
                             <svg
                                 width="24"
@@ -134,7 +134,7 @@ function Product(props) {
                             </p>
                         </div>
                     ) : null}
-                    {data.includes.video ? (
+                    {data.includes?.video ? (
                         <div className="flex items-center gap-2">
                             <svg
                                 width="24"
@@ -168,11 +168,11 @@ function Product(props) {
                             </svg>
 
                             <p className="font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
-                                {data.includes.video} Video
+                                {data.includes?.video} Video
                             </p>
                         </div>
                     ) : null}
-                    {data.includes.certificate ? (
+                    {data.includes?.certificate ? (
                         <div className="flex items-center gap-2">
                             <svg
                                 width="24"
@@ -280,9 +280,9 @@ function Product(props) {
                         />
                     </svg>
                     <p className="font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333AD]">
-                        {data.language.id
+                        {data.language?.id
                             ? "Bahasa Indonesia"
-                            : data.language.en
+                            : data.language?.en
                             ? "Bahasa Inggris"
                             : null}
                     </p>

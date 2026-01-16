@@ -16,16 +16,16 @@ function Card(props) {
             <div className="flex gap-2.5">
                 <img
                     className="w-10 h-10 rounded-[10px]"
-                    src={data.user.avatar}
+                    src={data.tutor?.avatar}
                 />
                 <div className="">
                     <p className="font-medium text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
-                        {data.user.name}
+                        {data.tutor?.name}
                     </p>
                     <p className="font-normal text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                        {data.user.position}{" "}
+                        {data.tutor?.position}{" "}
                         <span className="font-bold text-sm leading-[140%] tracking-[0.2%] text-[#333333ad]">
-                            {data.user.company}
+                            {data.tutor?.company}
                         </span>
                     </p>
                 </div>
@@ -154,7 +154,8 @@ function Card(props) {
 
                     <div className="flex font-medium text-sm leading-[140%] tracking-[0.2%] text-[#333333ad] underline decoration-solid">
                         <p>
-                            {data.testimonial.rating} {data.testimonial.review}
+                            {data.testimonial?.rating}{" "}
+                            {data.testimonial?.review}
                         </p>
                     </div>
                 </div>

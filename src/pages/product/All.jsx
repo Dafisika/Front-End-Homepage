@@ -52,6 +52,7 @@ function All() {
                             <section className="grid grid-cols-2 grid-rows-1 gap-6">
                                 {data?.data?.slice(0, 6).map((item, index) => (
                                     <Card
+                                        data={item}
                                         key={index}
                                         image={item.image}
                                         title={item.title}

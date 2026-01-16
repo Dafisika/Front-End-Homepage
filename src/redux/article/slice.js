@@ -18,6 +18,7 @@ export const fetchArticleByIdAsync = createAsyncThunk(
 
 const initialState = {
     data: [],
+    detail: {},
     error: "",
     isLoading: true,
 };
@@ -45,7 +46,7 @@ export const articleSlice = createSlice({
             })
             .addCase(fetchArticleByIdAsync.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.data = action.payload.data;
+                state.detail = action.payload.data;
             })
             .addCase(fetchArticleByIdAsync.rejected, (state, action) => {
                 state.isLoading = false;

@@ -16,3 +16,17 @@ export const fetchOrderDetail = async () => {
         return { data: [], error: err.message };
     }
 };
+export const fetchOrderDetailById = async () => {
+    try {
+        const response = await apiClient.get("/order-detail");
+
+        if (!response.status === 200) {
+            throw new Error(`HTTP Error! Status: $(response.status)`);
+        }
+        const data = await response.data;
+
+        return { data: data.find((item) => item.id === "OD-0001") };
+    } catch (err) {
+        return { data: [], error: err.message };
+    }
+};
